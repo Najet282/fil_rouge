@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodyinscription">
+    <header id="headerinscription">
+        <div>
+            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logoDanceMashing.png" alt="logo Dance Mashing"></a>
+        </div>
+        <div>
+            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logo_juste_debout.jpg" alt="logo Juste Debout"></a>
+        </div>
+    </header>
+    <section id="sectioninscription">
+        <article>
+            <h1>S'inscrire</h1>
+        </article>
+        <article>
+            <form action="connexion.html" method="POST">
+                <div class="inputinscription">
+                    <label class="label" for="surname">Nom</label>
+                    <input class="inputinscription" type="text" id="surname" name="surname" minlength="2" maxlength="20" placeholder="Votre nom"/>
+                </div>
+                <div class="inputinscription">
+                    <label class="label" for="name">Prénom</label>
+                    <input class="inputinscription" type="text" id="name" name="name" minlength="2" maxlength="20" placeholder="Votre prénom"/>
+                </div>
+                <div class="inputinscription">
+                    <label class="label" for="birthday">Date de naissance</label>
+                    <input class="inputinscription" type="date" id="birthday" name="birthday" placeholder="Votre date de naissance"/>
+                </div>
+                <div class="inputinscription">
+                    <label class="label" for="name">E-mail</label>
+                    <input class="inputinscription" type="email" id="email" name="email" placeholder="Adresse mail"/>
+                </div>
+                <div class="inputinscription">
+                    <label class="label" for="name">Mot de passe</label>
+                    <input class="inputinscription" type="password" id="mdp" name="mdp" placeholder="Mot de passe" minlength="8" maxlength="20" required/>
+                </div>
+                <div class="inputconnexion">
+                    <input type="submit" id="connexion" value="Valider"/>
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer id="footerconnexion">
+        
+    </footer>
+</body>
+</html>
