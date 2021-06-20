@@ -2,9 +2,9 @@
 
 /*body*/
 
-#bodyindex {
+#bodyIndex {
     display: grid;
-    grid-template-rows: 0.3fr 2fr;
+    grid-template-rows: 0.8fr 6fr 0.5fr;
     grid-template-columns: 1fr 3fr;
     margin: 0;
     padding: 0;
@@ -13,9 +13,11 @@
 /*TOUS les liens du site*/
 
 a:link {
-    color: #EEE8AA;
+    color: #AB8D3F;
     text-decoration: none;
+    font-size: 1.2em;
 }
+
 
 /*TOUTES les img du site*/
 
@@ -31,14 +33,13 @@ header {
     grid-column: 1 / 3;
     display: grid;
     grid-template-rows: 0.5fr 0.5fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
     background-color: black;
-    width: 100vw;
 }
 
 /*header : les logos*/
 
-header div, .linkheader {
+header div, .linkHeader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +55,12 @@ header div:last-of-type {
     grid-column: 3;
 }
 
-.imglogo {
+#imgLogoDM {
     width: 50%;
+}
+
+#imgLogoJD {
+    width: 45%;
 }
 
 /*header : menu*/
@@ -78,7 +83,7 @@ nav div:first-of-type {
     border-radius: 10px;
     padding: 0.3em;
     color: black;
-    width: 25%;
+    width: 30%;
 }
 
 nav div:last-of-type {
@@ -89,14 +94,12 @@ nav form {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 nav input[type=text] {
     width: 80%;
     border: black solid 2px;
     border-radius: 10px;
-    font-size: 1em;
 }
 
 nav input[type=image] {
@@ -108,7 +111,6 @@ nav input[type=image] {
 nav a:visited {
     color: #AB8D3F;
     text-decoration: none;
-    font-size: 1em;
 }
 
 /*aside et section*/
@@ -116,25 +118,37 @@ nav a:visited {
 aside {
     grid-row: 2;
     grid-column: 1;
-    align-items: flex-end;
-    background-color: black;
-    border: black solid 1px;
-    border-radius: 10px;
-    margin: 4em 0 4em 0;
-    width: 100%;
-    margin-left: 1em;
+    margin: 20% 0 20% 20%;
 }
 
-#sectionindex {
+#sectionIndex {
     grid-row: 2;
     grid-column: 2;
     align-items: center;
 }
 
-aside, #sectionindex {
+aside, #sectionIndex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+/*aside et section : tous les h1*/
+
+aside h1, section h1 {
+    text-align: center;
+    border: black outset 2px;
+    border-radius: 10px;
+}
+
+aside h1 {
+    padding: 2.4%;
+    margin-top: 2.5%;
+    margin-bottom: 9%;
+}
+
+section h1 {
+    padding: 0.8%;
+    margin-left: 2%;
 }
 
 /*aside et section : tous les articles*/
@@ -142,64 +156,83 @@ aside, #sectionindex {
 article {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 }
+
+/*aside : margin des articles*/
 
 aside article {
-    width: 100%;
-    height: 50%;
+    margin-bottom: 10%;
 }
 
-#sectionindex article {
+aside div:first-of-type {
+    flex-direction: column;
+}
+
+/*aside et section : toutes les div dans les articles*/
+
+aside div, #sectionIndex>article>div:first-of-type, #sectionIndex>article>div:last-of-type {
     background-color: black;
     border: black solid 1px;
     border-radius: 10px;
-    margin: 4em 0 4em 0;
-    width: 80%;
-    height: 100%;
 }
 
-/*section : div avec les img dans le dernier article */
+/*section : largeur et margin des articles*/
+
+#sectionIndex article {
+    width: 80%;
+}
+
+#sectionIndex article:first-of-type {
+    margin: 6.5% 0 6% 0;
+}
+
+#sectionIndex article:last-of-type {
+    margin: 6% 0 6.5% 0;
+}
+
+/*section : div avec les img (post_jour) dans le dernier article */
 
 article div {
     display: flex;
     flex-direction: row;
+    margin: 2% 0 2% 2%;
 }
 
 /*aside et section : tous les liens des photos vers les autres pages*/
 
-.imgaside {
+.imgAside {
     width: 80%;
     height: 80%;
+    margin-top: 6%;
+    margin-bottom: 6%;    
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#imgsection {
-    width: 70%;
+#linkImgChore {
+    width: 90%;
     height: 80%;
+    margin: auto;
 }
 
-#linkpost {
-    width: 100%;
-    height: 80%;
+.linkImgPost {
+    width: 25%;
+    margin: 2% 0% 2% 2%;
+
 }
 
-.linkpost, #linkpost {
-    display: flex;
-    justify-content: space-evenly;
-}
+/*aside et section : tous les liens des h1 vers les autres pages*/
 
-/*aside et section : tous les liens des textes vers les autres pages*/
-
-.linkaside, .linksection {
-    border: #EEE8AA solid 2px;
-    border-radius: 10px;
-    padding: 0.4em;
-    font-size: 0.8em;
+.linkAside, .linkSection {
+    padding: 2%;
     text-align: center;
     height: 2%;
+    color: white;
 }
 
+.linkAside {
+    margin: 2%;
+}
 
 /*aside : toutes les img*/
 
@@ -208,110 +241,146 @@ aside img {
     height: 100%;
 }
 
-/*section : lien de la photo vers la page choré_jour*/
+/*section : lien de la photo vers la page choreJour*/
 
-#imgchore {
+#imgChore {
     width: 100%;
     height: 100%;
 }
 
-/*section : tous les liens des photos vers la page post_jour*/
+/*section : tous les liens des photos vers la page postJour*/
 
-.imgpost {
-    width: 100%;
+.imgPost {
+    width: 90%;
     height: 100%;
 }
 
-/*section : input*/
+/*section : input (POSTER SA VIDEO et mASH MAINTENANT)*/
 
-#sectionindex input {
+#sectionIndex input {
     background-image: linear-gradient(to bottom left, #EEE8AA, #BCA465, #EEE8AA, #AB8D3F, #EEE8AA);
-    border-radius: 10px;
+    border-radius: 100%;
     font-size: 1.2em;
     text-align: center;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 15%;
 }
 
-#inputsection {
+#inputSection {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#inputsection form:first-of-type, form:last-of-type {
-    width: 40%;
+#inputSection form:first-of-type, form:last-of-type {
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#inputsection input {
+/*footer*/
+
+footer {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    background-color: black;
+    color: white;
     font-size: 1.2em;
+    text-align: center;
+    align-self: center;
 }
+
+/*footer PAGES connexion.html et inscription.html*/
+
+#footerConnexion {
+    grid-row: 3;
+    grid-column: 1 / 4;
+}
+
+#footerConnexion a {
+    color: #AB8D3F;
+}
+
 
 /*PAGES connexion.html et inscription.html*/
 
 /*body*/
 
-#bodyconnexion, #bodyinscription {
+#bodyConnexion, #bodyInscription {
     display: grid;
-    grid-template-rows: 0.5fr 2fr;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
-/*section*/
-
-#sectionconnexion {
-    grid-row: 2;
-    grid-column: 2;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr;
+#bodyConnexion {
+    grid-template-rows: 0.5fr 3fr 0.5fr;
 }
 
-#sectioninscription {
+#bodyInscription {
+    grid-template-rows: 1fr 3fr 0.5fr;
+}
+
+/*header*/
+
+#bodyConnexion header, #bodyInscription header {
+    grid-column: 1 / 4;
+}
+
+/*header : les logos*/
+
+#bodyConnexion #imgLogoDM, #bodyInscription #imgLogoDM {
+    width: 35%;
+}
+
+#bodyConnexion #imgLogoJD, #bodyInscription #imgLogoJD {
+    width: 30%;
+}
+
+
+/*section*/
+
+#sectionConnexion, #sectionInscription {
     grid-row: 2;
     grid-column: 2;
-    display: grid;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    background-color: #F0F5F5;
+    border: #F0F5F5 solid 1px;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /*h1*/
 
-#sectionconnexion article:first-of-type, #bodyinscription article:first-of-type {
-    grid-row: 1;
-    grid-column: 1;
-    justify-content: flex-end;
+#sectionConnexion article:first-of-type, #bodyInscription article:first-of-type {
     font-size: 1.5em;
+}
+
+
+#sectionInscription h1,#sectionConnexion h1 {
+    margin: 7% 6% 6% 6%;
 }
 
 /*form*/
 
-#sectionconnexion article:nth-of-type(2), #sectioninscription article:last-of-type {
-    grid-row: 2;
-    grid-column: 1;
-}
 
-#bodyconnexion form, #bodyinscription form {
+#bodyConnexion form, #bodyInscription form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 90%;
+    padding-bottom: 3%;
 }
 
 /*form : toutes les div des champs du formulaire*/
 
-.inputconnexion {
+.inputConnexion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,12 +388,13 @@ aside img {
     padding: 0.4em;
 }
 
-.inputinscription {
+.inputInscription {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 80%;
     padding: 0.4em;
+    margin-right: auto;
 }
 
 /*form : tous les champs du formulaire*/
@@ -338,13 +408,13 @@ form input {
 
 /*form : tous les input type submit des formulaires*/
 
-.inputconnexion input[type=submit] {
+.inputConnexion input[type=submit] {
     background-image: linear-gradient(to bottom left, #EEE8AA, #BCA465, #EEE8AA, #AB8D3F, #EEE8AA);
     /*variante si ton rose : background-image: linear-gradient(to bottom left, #ff1493, pink, #bf09bd);*/
     width: 40%;
 }
 
-#sectioninscription input[type=submit] {
+#sectionInscription input[type=submit] {
     margin-top: 1.5em;
 }
 
@@ -361,27 +431,31 @@ form .label {
 
 /*p du formulaire de connexion*/
 
-#sectionconnexion article:last-of-type {
-    grid-row: 3;
+#sectionConnexion article:last-of-type {
+    /*grid-row: 3;
     grid-column: 1;
-    justify-content: flex-start;
+    justify-content: flex-start;*/
     font-size: 1.5em;
+    text-align: center;
 }
 
-#sectionconnexion a:visited {
+#sectionConnexion a:visited {
     color: #AB8D3F;
 }
 
-/*footer*/
+#sectionConnexion a {
+    color: black;
+}
 
 @media screen and (max-width: 800px) {
     
-    /*body page index*/
+    /*PAGE index.html*/
 
-    #bodyindex {
-        grid-template-rows: 0.5fr 2fr 1fr;
+    /*body*/
+
+    #bodyIndex {
+        grid-template-rows: 0.5fr 2.5fr 2fr 0.5fr;
         grid-template-columns: 1fr;
-        height: 115vh;
     }
 
     /*TOUS les header*/
@@ -400,11 +474,19 @@ form .label {
         grid-column: 3;
     }
 
+    #bodyIndex #imgLogoDM {
+        width: 90%;
+    }
+    
+    #bodyIndex #imgLogoJD {
+        width: 80%;
+    }
+
     /*header : menu*/
 
     header nav {
         grid-column: 2;
-        justify-content: flex-end;
+        grid-row: 1 / 3;;
     }
     
     nav form:first-of-type {
@@ -425,91 +507,164 @@ form .label {
         font-size: 0.6em;
     }
     
+    /*section et aside : liens des h1*/
+
+    a:link {
+        font-size: 1em;;
+    }
+    
     /*section*/
 
-    #sectionindex {
+    #sectionIndex {
         grid-row: 2;
         grid-column: 1;
-        width: 100vw;
         display: grid;
-        grid-template-rows: 1.5fr 0.5fr 1.5fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
         grid-template-columns: 1fr;
     }
+    
+    /*section : tous les articles*/
 
-    #sectionindex article:first-of-type {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    #sectionindex article:nth-of-type(2) {
-        grid-row: 2;
-        grid-column: 1;
-    }
-
-    #sectionindex article:last-of-type {
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    #sectionindex article {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        height: 70%;
+    #sectionIndex article {
+        width: 90%;
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    /*section : tous les liens des photos vers la page post_jour*/
-
-    .linkpost {
-        height: 100%;
+    #sectionIndex article:first-of-type {
+        grid-row: 1;
+        grid-column: 1;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    /*section et aside : tous les liens des textes vers les pages du site*/
+    #sectionIndex article:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    .linkaside, .linksection {
-        height: 5%;
+    #sectionIndex article:last-of-type {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .linkAside {
+        margin-top: 5%;
+    }
+
+    /*section : 1ere et dernière div*/
+
+    #sectionIndex div:first-of-type, #sectionIndex div:last-of-type, {
+        margin: 0;
     }
 
     /*section : input*/
 
-    #inputsection form:first-of-type, form:last-of-type {
+    #inputSection form:first-of-type, form:last-of-type {
         width: 40%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #sectionindex input {
-        font-size: 0.8em;
+    #sectionIndex input {
+        width: 80%;
+        font-size: 0.7em;
     }
   
-
     /*aside*/
 
     aside {
         grid-row: 3;
         grid-column: 1;
-        width: 80%;
-        height: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0.5em;
-        margin-bottom: 1em;
+        margin: auto;
+        background-color: white;
+        border: white solid 1px;
+    }
+
+    aside div:first-of-type {
+        display: flex;
         flex-direction: row;
     }
 
+    /*aside : tous les articles*/
+
     aside article {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        height: 100%;
+        margin-bottom: 0;
     }
 
-    /*PAGE connexion.html*/
+    aside div:first-of-type, aside div:last-of-type {
+        background-color: black;
+        border: black solid 1px;
+        border-radius: 10px;
+    }
 
-    #sectionconnexion, #sectioninscription {
+
+    /*aside : tous les h1*/
+
+    aside h1 {
+        margin: 3%;
+    }
+
+    /*aside : toutes les div*/
+
+    aside>article>div {
+        margin: 4%;
+    }
+
+    aside>article>div>.imgAside {
+        margin: 2%;
+        width: 100%;
+        height: auto;
+    }
+
+    /*footer*/
+
+    #bodyIndex footer {
+        grid-row: 4;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+
+    /*PAGES connexion.html et inscription.html*/
+
+        #bodyConnexion {
+        grid-template-rows: 0.5fr 3fr 0.5fr;
+    }
+    
+    #bodyInscription {
+        grid-template-rows: 0.5fr 3fr 0.5fr;
+    }
+    
+    /*header*/
+
+    #bodyConnexion header, #bodyInscription header {
+        height: auto;
+    }
+
+    /*header : les logos*/
+
+    #bodyConnexion #imgLogoDM, #bodyInscription #imgLogoDM {
+        width: 90%;
+    }
+    
+    #bodyConnexion #imgLogoJD, #bodyInscription #imgLogoJD {
+        width: 80%;
+    }
+
+    /*section*/
+
+    #sectionConnexion, #sectionInscription {
         grid-row: 2;
-        grid-column: 1;
+        grid-column: 1 / 4;
+    }
+
+    /*PAGE inscription.html*/
+
+    form .label {
+        font-size: 0.9em;
     }
 }

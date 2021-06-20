@@ -7,10 +7,10 @@
     <title>Dance Mashing</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="bodyindex">
+<body id="bodyIndex">
     <header>
         <div>
-            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logoDanceMashing.png" alt="logo Dance Mashing"></a>
+            <a class="linkHeader" href="index.html"><img id="imgLogoDM" src="images/logoDanceMashing.png" alt="Logo Dance Mashing"></a>
         </div>
         <nav>
             <div><a href="connexion.html">Connexion</a></div>
@@ -22,26 +22,34 @@
             </div>
         </nav>
         <div>
-            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logo_juste_debout.jpg" alt="logo Juste Debout"></a>
+            <a class="linkHeader" href="index.html"><img id="imgLogoJD" src="images/logoJusteDebout.jpg" alt="Logo Juste Debout"></a>
         </div>
     </header>
     <aside>
         <article>
-            <a class="imgaside" href="top3.html"><img src="images/top3.png" alt="top 3 de la semaine"></a>
-            <a class="linkaside" href="top3.html">TOP 3</a>
+            <h1><a class="linkAside" href="top3.html">TOP 3</a></h1>
+            <div>
+                <a class="imgAside" href="top3.html"><img src="images/top1.webp" alt="Top 1 de la semaine"></a>
+                <a class="imgAside" href="top3.html"><img src="images/top2.webp" alt="Top 2 de la semaine"></a>
+                <a class="imgAside" href="top3.html"><img src="images/top3.jpg" alt="Top 3 de la semaine"></a>
+            </div>
         </article>
         <article>
-            <a class="imgaside" href="last_videos.html"><img src="images/last_videos.png" alt="vidéos anciennes"></a>
-            <a class="linkaside" href="last_videos.html">ANCIENS POSTS</a>
+            <h1><a class="linkAside" href="lastVideos.html">ANCIENS POSTS</a></h1>
+            <div>
+                <a class="imgAside" href="lastVideos.html"><img src="images/lastVideo.jpg" alt="Anciennes vidéos"></a>
+            </div>
         </article>
     </aside>
-    <section id="sectionindex">
+    <section id="sectionIndex">
         <article>
-            <a id="imgsection" href="chore_jour.html"><img id="imgchore" src="images/chore_jour.png" alt="choré du jour"></a>
-            <a class="linksection" href="chore_jour.html">CHORE DU JOUR</a>
+            <h1><a class="linkSection" href="choreJour.html">CHOREGRAPHIE DU JOUR</a></h1>
+            <div>
+                <a id="linkImgChore" href="choreJour.html"><img id="imgChore" src="images/choregraphie.jpg" alt="Choré du jour"></a>
+            </div>
         </article>
-        <div id="inputsection">
-            <form action="post_video.html" method="POST">
+        <div id="inputSection">
+            <form action="postVideo.html" method="POST">
                 <input type="text" value="POSTER SA VIDEO"/>
             </form>
             <form action="mash.html" method="POST">
@@ -49,14 +57,17 @@
             </form>
         </div>
         <article>
-            <div id="linkpost">
-                <a class="linkpost" href="post_jour.html"><img class="imgpost" src="images/post1_jour.png" alt="post du jour"></a>
-                <a class="linkpost" href="post_jour.html"><img class="imgpost" src="images/post2_jour.png" alt="post du jour"></a>
-                <a class="linkpost" href="post_jour.html"><img class="imgpost" src="images/post3_jour.png" alt="post du jour"></a>
-                <a class="linkpost" href="post_jour.html"><img class="imgpost" src="images/post4_jour.png" alt="post du jour"></a>
+            <h1><a class="linkSection" href="postJour.html">POSTS DU JOUR</a></h1>
+            <div>
+                <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo1.jpg" alt="Post du jour"></a>
+                <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo2.jpg" alt="Post du jour"></a>
+                <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo3.jpg" alt="Post du jour"></a>
+                <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo4.jpg" alt="Post du jour"></a>
             </div>
-            <a class="linksection" href="post_jour.html">POSTS DU JOUR</a>
         </article>
     </section>
+    <footer>
+        <p>Toi aussi deviens un(e) pro de la danse urbaine. Rejoins l'une des deux plus grandes écoles importantes d'Europe (<a href="https://fr.mappy.com/plan#/3-rue-Th%C3%A9ron-De-Montaug%C3%A9-31200-Toulouse">Toulouse</a>, <a href="http://www.juste-debout-school.com/">Paris</a>).</p>
+    </footer>
 </body>
 </html>

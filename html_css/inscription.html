@@ -7,49 +7,53 @@
     <title>Inscription</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="bodyinscription">
-    <header id="headerinscription">
+<body id="bodyInscription">
+    <header id="headerInscription">
         <div>
-            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logoDanceMashing.png" alt="logo Dance Mashing"></a>
+            <a class="linkHeader" href="index.html"><img id="imgLogoDM" src="images/logoDanceMashing.png" alt="Logo Dance Mashing"></a>
         </div>
         <div>
-            <a class="linkheader" href="index.html"><img class="imglogo" src="images/logo_juste_debout.jpg" alt="logo Juste Debout"></a>
+            <a class="linkHeader" href="index.html"><img id="imgLogoJD" src="images/logoJusteDebout.jpg" alt="Logo Juste Debout"></a>
         </div>
     </header>
-    <section id="sectioninscription">
+    <section id="sectionInscription">
         <article>
             <h1>S'inscrire</h1>
         </article>
         <article>
             <form action="connexion.html" method="POST">
-                <div class="inputinscription">
+                <div class="inputInscription">
                     <label class="label" for="surname">Nom</label>
-                    <input class="inputinscription" type="text" id="surname" name="surname" minlength="2" maxlength="20" placeholder="Votre nom"/>
+                    <input class="inputInscription" type="text" id="surname" name="surname" minlength="2" maxlength="20" placeholder="Nom"/>
                 </div>
-                <div class="inputinscription">
+                <div class="inputInscription">
                     <label class="label" for="name">Prénom</label>
-                    <input class="inputinscription" type="text" id="name" name="name" minlength="2" maxlength="20" placeholder="Votre prénom"/>
+                    <input class="inputInscription" type="text" id="name" name="name" minlength="2" maxlength="20" placeholder="Prénom"/>
                 </div>
-                <div class="inputinscription">
+                <div class="inputInscription">
+                    <label class="label" for="pseudo">Pseudo</label>
+                    <input class="inputInscription" type="text" id="pseudo" name="pseudo" minlength="2" maxlength="20" placeholder="Pseudo"/>
+                </div>
+                <div class="inputInscription">
                     <label class="label" for="birthday">Date de naissance</label>
-                    <input class="inputinscription" type="date" id="birthday" name="birthday" placeholder="Votre date de naissance"/>
+                    <input class="inputInscription" type="date" id="birthday" name="birthday"/>
                 </div>
-                <div class="inputinscription">
+                <div class="inputInscription">
                     <label class="label" for="name">E-mail</label>
-                    <input class="inputinscription" type="email" id="email" name="email" placeholder="Adresse mail"/>
+                    <input class="inputInscription" type="email" id="email" name="email" placeholder="Adresse mail"/>
                 </div>
-                <div class="inputinscription">
+                <div class="inputInscription">
                     <label class="label" for="name">Mot de passe</label>
-                    <input class="inputinscription" type="password" id="mdp" name="mdp" placeholder="Mot de passe" minlength="8" maxlength="20" required/>
+                    <input class="inputInscription" type="password" id="mdp" name="mdp" placeholder="Mot de passe" minlength="8" maxlength="20" required/>
                 </div>
-                <div class="inputconnexion">
+                <div class="inputConnexion">
                     <input type="submit" id="connexion" value="Valider"/>
                 </div>
             </form>
         </article>
     </section>
-    <footer id="footerconnexion">
-        
+    <footer id="footerConnexion">
+        <p>Toi aussi deviens un(e) pro de la danse urbaine. Rejoins l'une des deux plus grandes écoles importantes d'Europe (<a href="https://fr.mappy.com/plan#/3-rue-Th%C3%A9ron-De-Montaug%C3%A9-31200-Toulouse">Toulouse</a>, <a href="http://www.juste-debout-school.com/">Paris</a>).</p>
     </footer>
 </body>
 </html>
