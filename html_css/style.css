@@ -1,670 +1,427 @@
 /*PAGE index.html*/
 
-/*body*/
-
 #bodyIndex {
-    display: grid;
-    grid-template-rows: 0.8fr 6fr 0.5fr;
-    grid-template-columns: 1fr 3fr;
     margin: 0;
-    padding: 0;
+    display: grid;
+    grid-template-rows: 0.1fr 4fr 0.1fr;
+    grid-template-columns: 1fr 3fr;
 }
 
-/*TOUS les liens du site*/
+/*TOUS LES LIENS*/
 
 a:link {
     color: #AB8D3F;
-    text-decoration: none;
-    font-size: 1.2em;
 }
 
+/*HEADER*/
 
-/*TOUTES les img du site*/
-
-img {
-    border: black solid 1px;
-    border-radius: 10px;
-}
-
-/*TOUS les header*/
-
-header {
+#headerIndex {
     grid-row: 1;
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     display: grid;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
     background-color: black;
 }
 
-/*header : les logos*/
+/*HEADER : logos*/
 
-header div, .linkHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header div:first-of-type {
-    grid-row: 1 / 3;
+#headerIndex div:first-of-type {
     grid-column: 1;
 }
 
-header div:last-of-type {
-    grid-row: 1 / 3;
+#linkLogoDM, #linkLogoJD {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#headerIndex div:last-of-type {
     grid-column: 3;
 }
 
-#imgLogoDM {
-    width: 50%;
-}
-
-#imgLogoJD {
-    width: 45%;
-}
-
-/*header : menu*/
-
-header nav {
-    grid-row: 2;
-    grid-column: 2 ;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-nav form:last-of-type {
-    width: 100%;
-}
-
-nav div:first-of-type {
-    background-color: white;
-    border: white solid 1px;
-    border-radius: 10px;
-    padding: 0.3em;
-    color: black;
+#headerIndex #imgLogoDM, #imgLogoJD {
     width: 30%;
 }
 
-nav div:last-of-type {
-    width: 70%;
-}
+/*HEADER : nav*/
 
-nav form {
+nav {
+    grid-column: 2;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-nav input[type=text] {
-    width: 80%;
-    border: black solid 2px;
-    border-radius: 10px;
+nav a{
+    border: white solid 1px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 25px;
+    margin: 20px;
+    padding: 2px 20px 5px 20px;
 }
 
-nav input[type=image] {
-    width: 10%;
-}
-
-/*nav : lien*/
-
-nav a:visited {
-    color: #AB8D3F;
-    text-decoration: none;
-}
-
-/*aside et section*/
+/*ASIDE*/
 
 aside {
     grid-row: 2;
     grid-column: 1;
-    margin: 20% 0 20% 20%;
+    margin: 48px;
+    background-color: #F0F5F5;
+    border: #F0F5F5 solid 1px;
+    border-radius: 10px;
 }
 
-#sectionIndex {
+aside, #setImgTop3, #setLastImg {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Toutes les img de l'aside*/
+
+.imgAside img {
+    width: 96%;
+    margin: 5px;
+    border: #F0F5F5 solid 1px;
+    border-radius: 10px;
+}
+
+/*dernière img de l'aside*/
+
+#setLastImg>a:last-of-type {
+    height: 190px;
+}
+
+#setLastImg>a:last-of-type>img {
+    height: 100%;
+}
+
+/*TOUS LES LIENS H1 DE L'ASIDE ET DE LA SECTION*/
+
+.linkAside, .linkSection {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+/*SECTION*/
+
+section {
     grid-row: 2;
-    grid-column: 2;
-    align-items: center;
+    grid-column: 2 / 4;
+    margin: 48px;
 }
 
-aside, #sectionIndex {
-    display: flex;
-    flex-direction: column;
-}
+/*SECTION : articles chorégraphie et posts*/
 
-/*aside et section : tous les h1*/
-
-aside h1, section h1 {
-    text-align: center;
-    border: black outset 2px;
+section article {
+    background-color: #F0F5F5;
+    border: #F0F5F5 solid 1px;
     border-radius: 10px;
 }
 
-aside h1 {
-    padding: 2.4%;
-    margin-top: 2.5%;
-    margin-bottom: 9%;
-}
+/*SECTION : chorégraphie*/
 
-section h1 {
-    padding: 0.8%;
-    margin-left: 2%;
-}
-
-/*aside et section : tous les articles*/
-
-article {
-    display: flex;
-    flex-direction: column;
-}
-
-/*aside : margin des articles*/
-
-aside article {
-    margin-bottom: 10%;
-}
-
-aside div:first-of-type {
-    flex-direction: column;
-}
-
-/*aside et section : toutes les div dans les articles*/
-
-aside div, #sectionIndex>article>div:first-of-type, #sectionIndex>article>div:last-of-type {
-    background-color: black;
-    border: black solid 1px;
-    border-radius: 10px;
-}
-
-/*section : largeur et margin des articles*/
-
-#sectionIndex article {
-    width: 80%;
-}
-
-#sectionIndex article:first-of-type {
-    margin: 6.5% 0 6% 0;
-}
-
-#sectionIndex article:last-of-type {
-    margin: 6% 0 6.5% 0;
-}
-
-/*section : div avec les img (post_jour) dans le dernier article */
-
-article div {
+#chore {
     display: flex;
     flex-direction: row;
-    margin: 2% 0 2% 2%;
 }
 
-/*aside et section : tous les liens des photos vers les autres pages*/
-
-.imgAside {
-    width: 80%;
-    height: 80%;
-    margin-top: 6%;
-    margin-bottom: 6%;    
-    margin-left: auto;
-    margin-right: auto;
+#imgChore {
+    width: 95%;
+    margin: 1px 5px 25px 30px;
+    border: #F0F5F5 solid 1px;
+    border-radius: 10px;
 }
 
-#linkImgChore {
-    width: 90%;
-    height: 80%;
-    margin: auto;
+/*SECTION : posts*/
+
+#setImgPost {
+    display: flex;
+    flex-direction: row;
 }
 
 .linkImgPost {
     width: 25%;
-    margin: 2% 0% 2% 2%;
-
+    height: 90%;
+    margin: 5px 20px 20px 20px;
 }
-
-/*aside et section : tous les liens des h1 vers les autres pages*/
-
-.linkAside, .linkSection {
-    padding: 2%;
-    text-align: center;
-    height: 2%;
-    color: white;
-}
-
-.linkAside {
-    margin: 2%;
-}
-
-/*aside : toutes les img*/
-
-aside img {
-    width: 100%;
-    height: 100%;
-}
-
-/*section : lien de la photo vers la page choreJour*/
-
-#imgChore {
-    width: 100%;
-    height: 100%;
-}
-
-/*section : tous les liens des photos vers la page postJour*/
 
 .imgPost {
-    width: 90%;
-    height: 100%;
-}
-
-/*section : input (POSTER SA VIDEO et mASH MAINTENANT)*/
-
-#sectionIndex input {
-    background-image: linear-gradient(to bottom left, #EEE8AA, #BCA465, #EEE8AA, #AB8D3F, #EEE8AA);
-    border-radius: 100%;
-    font-size: 1.2em;
-    text-align: center;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15%;
+    height: 300px;
+    border: #F0F5F5 solid 1px;
+    border-radius: 10px;
 }
+
+/*SECTION : input (POSTER SA VIDEO et MASH MAINTENANT)*/
 
 #inputSection {
     display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
 }
 
-#inputSection form:first-of-type, form:last-of-type {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+#inputSection form {
+    margin: 60px;
 }
 
-/*footer*/
+#inputSection input {
+    font-size: 30px;
+    text-align: center;
+    background-image: linear-gradient(to bottom left, #EEE8AA, #BCA465, #EEE8AA, #AB8D3F, #EEE8AA);
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*FOOTER*/
 
 footer {
     grid-row: 3;
-    grid-column: 1 / 3;
-    background-color: black;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    align-self: center;
-}
-
-/*footer PAGES connexion.html et inscription.html*/
-
-#footerConnexion {
-    grid-row: 3;
     grid-column: 1 / 4;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: black;
 }
 
-#footerConnexion a {
+footer a {
     color: #AB8D3F;
 }
 
-
-/*PAGES connexion.html et inscription.html*/
-
-/*body*/
+/*PAGES connexion.html & inscription.html*/
 
 #bodyConnexion, #bodyInscription {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     margin: 0;
-    padding: 0;
-    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.1fr;
+    grid-template-columns: 1fr;
 }
 
-#bodyConnexion {
-    grid-template-rows: 0.5fr 3fr 0.5fr;
+/*HEADER*/
+
+#headerConnexion, #headerInscription {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
 }
 
-#bodyInscription {
-    grid-template-rows: 1fr 3fr 0.5fr;
+#headerConnexion .linkHeader, #headerInscription .linkHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-/*header*/
-
-#bodyConnexion header, #bodyInscription header {
-    grid-column: 1 / 4;
-}
-
-/*header : les logos*/
-
-#bodyConnexion #imgLogoDM, #bodyInscription #imgLogoDM {
-    width: 35%;
-}
-
-#bodyConnexion #imgLogoJD, #bodyInscription #imgLogoJD {
+#headerConnexion #imgLogoDM, #headerInscription #imgLogoDM {
     width: 30%;
 }
 
+#headerConnexion #imgLogoJD, #headerInscription #imgLogoJD {
+    width: 25%;
+}
 
-/*section*/
+/*SECTION*/
 
 #sectionConnexion, #sectionInscription {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 1;
+    margin: 0 400px 0 400px;
     background-color: #F0F5F5;
     border: #F0F5F5 solid 1px;
     border-radius: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
-/*h1*/
-
-#sectionConnexion article:first-of-type, #bodyInscription article:first-of-type {
-    font-size: 1.5em;
+#sectionConnexion {
+    padding: 100px;
 }
 
-
-#sectionInscription h1,#sectionConnexion h1 {
-    margin: 7% 6% 6% 6%;
+#sectionInscription {
+    padding: 54px;
 }
 
-/*form*/
-
-
-#bodyConnexion form, #bodyInscription form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 90%;
-    padding-bottom: 3%;
+#sectionConnexion h1, #sectionInscription h1 {
+    font-size: 30px;
+    text-align: center
 }
 
-/*form : toutes les div des champs du formulaire*/
-
-.inputConnexion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    padding: 0.4em;
+#sectionConnexion p, #sectionInscription p {
+    font-size: 20px;
+    text-align: center
 }
 
-.inputInscription {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 80%;
-    padding: 0.4em;
-    margin-right: auto;
+#sectionConnexion form, #sectionInscription form {
+    padding: 20px;
 }
 
-/*form : tous les champs du formulaire*/
+#sectionConnexion div, #sectionInscription div {
+    margin-top: 20px;
+}
 
-form input {
-    border: black solid 2px;
+.inputConnexion, .inputInscription {
     border-radius: 10px;
-    padding: 0.4em;
-    font-size: 1em;
-}
-
-/*form : tous les input type submit des formulaires*/
-
-.inputConnexion input[type=submit] {
-    background-image: linear-gradient(to bottom left, #EEE8AA, #BCA465, #EEE8AA, #AB8D3F, #EEE8AA);
-    /*variante si ton rose : background-image: linear-gradient(to bottom left, #ff1493, pink, #bf09bd);*/
-    width: 40%;
-}
-
-#sectionInscription input[type=submit] {
-    margin-top: 1.5em;
-}
-
-/*form : tous les labels des champs du formulaire*/
-
-form .label {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    padding: 0.4em;
-    font-size: 1.3em;
-}
-
-/*p du formulaire de connexion*/
-
-#sectionConnexion article:last-of-type {
-    /*grid-row: 3;
-    grid-column: 1;
-    justify-content: flex-start;*/
-    font-size: 1.5em;
+    padding: 5px;
+    font-size: 20px;
     text-align: center;
 }
 
-#sectionConnexion a:visited {
-    color: #AB8D3F;
+#sectionConnexion input[type=submit] {
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
-#sectionConnexion a {
-    color: black;
+#sectionInscription input[type=submit] {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 800px) {
-    
-    /*PAGE index.html*/
-
-    /*body*/
 
     #bodyIndex {
-        grid-template-rows: 0.5fr 2.5fr 2fr 0.5fr;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
+  
+    /*HEADER : logos*/
 
-    /*TOUS les header*/
-
-    header {
-        grid-column: 1;
-    }
-
-    /*header : les logos*/
-
-    header div:first-of-type {
-        grid-column: 1;
-    }
-
-    header div:last-of-type {
-        grid-column: 3;
-    }
-
-    #bodyIndex #imgLogoDM {
-        width: 90%;
-    }
-    
-    #bodyIndex #imgLogoJD {
-        width: 80%;
-    }
-
-    /*header : menu*/
-
-    header nav {
-        grid-column: 2;
-        grid-row: 1 / 3;;
-    }
-    
-    nav form:first-of-type {
+    #headerIndex #imgLogoDM, #imgLogoJD {
         width: 100%;
     }
 
-    nav div:first-of-type {
-        padding: 0.3em;
-        font-size: 0.6em;
+    #linkLogoJD {
+        margin-left: 0;
     }
 
-    nav div:last-of-type {
-        width: 80%;
+    /*HEADER : nav*/
+
+    nav a {
+        font-size: 15px;
+        margin: 10px;
+        padding: 2px 10px 5px 10px;
     }
 
-    nav input[type=text] {
-        padding: 0.4em;
-        font-size: 0.6em;
-    }
-    
-    /*section et aside : liens des h1*/
+    /*SECTION*/
 
-    a:link {
-        font-size: 1em;;
-    }
-    
-    /*section*/
+    /*SECTION : chorégraphie */
 
-    #sectionIndex {
-        grid-row: 2;
-        grid-column: 1;
-        display: grid;
-        grid-template-rows: 1fr 0.5fr 1fr;
-        grid-template-columns: 1fr;
+    section {
+        margin: 0;
+        width: 100vw;
     }
-    
-    /*section : tous les articles*/
 
-    #sectionIndex article {
+    #imgChore {
+        height: 100%;
+        margin: 0 5px 20px 5px;
+    }
+
+    /*SECTION : input (POSTER SA VIDEO et MASH MAINTENANT)*/
+
+    #inputSection {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #inputSection form {
+        margin: 2px;
+        width: 50vw;
+        text-align: center;
+    }
+
+    #inputSection input {
+        font-size: 13px;
+    }
+
+    /*SECTION : posts*/
+
+    #setImgPost {
+        flex-direction: column;
+    }
+
+    .linkImgPost {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+    }
+
+    .imgPost {
         width: 90%;
-        margin-top: 0;
-        margin-bottom: 0;
+        height: 100%;
+        margin-bottom: 20px;
+        margin-left: 15px;
     }
 
-    #sectionIndex article:first-of-type {
-        grid-row: 1;
-        grid-column: 1;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    /*ASIDE*/
 
-    #sectionIndex article:nth-of-type(2) {
-        grid-row: 2;
-        grid-column: 1;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #sectionIndex article:last-of-type {
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    .linkAside {
-        margin-top: 5%;
-    }
-
-    /*section : 1ere et dernière div*/
-
-    #sectionIndex div:first-of-type, #sectionIndex div:last-of-type, {
+    aside {
         margin: 0;
     }
 
-    /*section : input*/
-
-    #inputSection form:first-of-type, form:last-of-type {
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #sectionIndex input {
-        width: 80%;
-        font-size: 0.7em;
-    }
-  
-    /*aside*/
-
-    aside {
-        grid-row: 3;
-        grid-column: 1;
-        margin: auto;
-        background-color: white;
-        border: white solid 1px;
-    }
-
-    aside div:first-of-type {
-        display: flex;
-        flex-direction: row;
-    }
-
-    /*aside : tous les articles*/
-
-    aside article {
-        margin-bottom: 0;
-    }
-
-    aside div:first-of-type, aside div:last-of-type {
-        background-color: black;
-        border: black solid 1px;
-        border-radius: 10px;
-    }
-
-
-    /*aside : tous les h1*/
-
-    aside h1 {
-        margin: 3%;
-    }
-
-    /*aside : toutes les div*/
-
-    aside>article>div {
-        margin: 4%;
-    }
-
-    aside>article>div>.imgAside {
-        margin: 2%;
-        width: 100%;
-        height: auto;
-    }
-
-    /*footer*/
+    /*FOOTER*/
 
     #bodyIndex footer {
-        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 14px;
     }
 
-    footer p {
-        font-size: 0.8em;
+    /*PAGES connexion.html & inscription.html*/
+
+    #bodyConnexion, #bodyInscription {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 0.5fr 3fr 0.1fr;
+        grid-template-columns: 1fr;
     }
 
-    /*PAGES connexion.html et inscription.html*/
+    /*HEADER*/
 
-        #bodyConnexion {
-        grid-template-rows: 0.5fr 3fr 0.5fr;
-    }
-    
-    #bodyInscription {
-        grid-template-rows: 0.5fr 3fr 0.5fr;
-    }
-    
-    /*header*/
-
-    #bodyConnexion header, #bodyInscription header {
-        height: auto;
+    #headerConnexion, #headerInscription {
+        justify-content: space-between;
+        width: 100vw;
     }
 
-    /*header : les logos*/
-
-    #bodyConnexion #imgLogoDM, #bodyInscription #imgLogoDM {
-        width: 90%;
-    }
-    
-    #bodyConnexion #imgLogoJD, #bodyInscription #imgLogoJD {
-        width: 80%;
+    #headerConnexion .linkHeader, #headerInscription .linkHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    /*section*/
+
+    #headerConnexion #imgLogoDM, #headerInscription #imgLogoDM {
+        width: 60%;
+    }
+
+    #headerConnexion #imgLogoJD, #headerInscription #imgLogoJD {
+        width: 60%;
+    }
+
+    /*SECTION*/
 
     #sectionConnexion, #sectionInscription {
-        grid-row: 2;
-        grid-column: 1 / 4;
+        margin: 0 0 0 0;
     }
 
-    /*PAGE inscription.html*/
+    #sectionConnexion {
+        padding: 0;
+    }
 
-    form .label {
-        font-size: 0.9em;
+    #sectionInscription {
+        padding: 0;
+    }
+
+    /*FOOTER*/
+
+    #bodyConnexion footer, #bodyInscription footer {
+        margin-top: 0;
+        font-size: 16px;
     }
 }

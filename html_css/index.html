@@ -8,43 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="bodyIndex">
-    <header>
+    <header id="headerIndex">
         <div>
-            <a class="linkHeader" href="index.html"><img id="imgLogoDM" src="images/logoDanceMashing.png" alt="Logo Dance Mashing"></a>
+            <a id="linkLogoDM" href="index.html"><img id="imgLogoDM" src="images/logoDanceMashing2.png" alt="Logo Dance Mashing"></a>
         </div>
         <nav>
-            <div><a href="connexion.html">Connexion</a></div>
-            <div >
-                <form action="search.php" method="POST">
-                    <input type="text" name="search" placeholder="Rechercher un compte"/>
-                    <input type="image" src="images/search.png" />
-                </form>
-            </div>
+            <a href="connexion.html">Connexion</a>
+            <a href="inscription.html">Inscription</a>
         </nav>
         <div>
-            <a class="linkHeader" href="index.html"><img id="imgLogoJD" src="images/logoJusteDebout.jpg" alt="Logo Juste Debout"></a>
+            <a id="linkLogoJD" href="index.html"><img id="imgLogoJD" src="images/logoJusteDebout.jpg" alt="Logo Juste Debout"></a>
         </div>
     </header>
-    <aside>
-        <article>
-            <h1><a class="linkAside" href="top3.html">TOP 3</a></h1>
-            <div>
-                <a class="imgAside" href="top3.html"><img src="images/top1.webp" alt="Top 1 de la semaine"></a>
-                <a class="imgAside" href="top3.html"><img src="images/top2.webp" alt="Top 2 de la semaine"></a>
-                <a class="imgAside" href="top3.html"><img src="images/top3.jpg" alt="Top 3 de la semaine"></a>
-            </div>
-        </article>
-        <article>
-            <h1><a class="linkAside" href="lastVideos.html">ANCIENS POSTS</a></h1>
-            <div>
-                <a class="imgAside" href="lastVideos.html"><img src="images/lastVideo.jpg" alt="Anciennes vidéos"></a>
-            </div>
-        </article>
-    </aside>
     <section id="sectionIndex">
         <article>
             <h1><a class="linkSection" href="choreJour.html">CHOREGRAPHIE DU JOUR</a></h1>
-            <div>
+            <div id="chore">
                 <a id="linkImgChore" href="choreJour.html"><img id="imgChore" src="images/choregraphie.jpg" alt="Choré du jour"></a>
             </div>
         </article>
@@ -58,7 +37,7 @@
         </div>
         <article>
             <h1><a class="linkSection" href="postJour.html">POSTS DU JOUR</a></h1>
-            <div>
+            <div id="setImgPost">
                 <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo1.jpg" alt="Post du jour"></a>
                 <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo2.jpg" alt="Post du jour"></a>
                 <a class="linkImgPost" href="postJour.html"><img class="imgPost" src="images/postVideo3.jpg" alt="Post du jour"></a>
@@ -66,6 +45,23 @@
             </div>
         </article>
     </section>
+    <aside>
+        <article>
+            <h1><a class="linkAside" href="top3.html">TOP 3</a></h1>
+            <div id="setImgTop3">
+                <a class="imgAside" href="top3.html"><img src="images/top1.webp" alt="Top 1 de la semaine"></a>
+                <a class="imgAside" href="top3.html"><img src="images/top2.webp" alt="Top 2 de la semaine"></a>
+                <a class="imgAside" href="top3.html"><img src="images/top3.jpg" alt="Top 3 de la semaine"></a>
+            </div>
+        </article>
+        <article>
+            <h1><a class="linkAside" href="lastVideos.html">ANCIENS POSTS</a></h1>
+            <div id="setLastImg">
+                <a class="imgAside" href="lastVideos.html"><img src="images/lastVideo.jpg" alt="Anciennes vidéos"></a>
+                <a class="imgAside" href="lastVideos.html"><img src="images/lastVideo2.jpg" alt="Anciennes vidéos"></a>
+            </div>
+        </article>
+    </aside>
     <footer>
         <p>Toi aussi deviens un(e) pro de la danse urbaine. Rejoins l'une des deux plus grandes écoles importantes d'Europe (<a href="https://fr.mappy.com/plan#/3-rue-Th%C3%A9ron-De-Montaug%C3%A9-31200-Toulouse">Toulouse</a>, <a href="http://www.juste-debout-school.com/">Paris</a>).</p>
     </footer>
